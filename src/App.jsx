@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Landing from './pages/Landing';
 import SchoolRegister from './pages/SchoolRegister';
@@ -15,7 +15,8 @@ import TutorSearch from './pages/TutorSearch';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+    <Router>
+
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/school/register" element={<SchoolRegister />} />
@@ -28,7 +29,7 @@ function App() {
           <Route path="/tutee/dashboard" element={<Dashboard />} />
           <Route path="/search" element={<TutorSearch />} />
         </Routes>
-      </Router>
+        </Router>
     </AuthProvider>
   );
 }
